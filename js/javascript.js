@@ -1,9 +1,9 @@
 
 
       new Twitch.Embed("twitch-embed", {
-        width: 854,
-        height: 480,
-        channel: "AdmiralBulldog",
+        width: 427,
+        height: 240,
+        channel: "rtz",
 		layout: "video",
 		autoplay: "false"
       });
