@@ -45,6 +45,7 @@ a:hover{
 		margin-left: auto;
 		margin-right: auto;
 		
+		border-top-style: solid;
 		border-top-width: 5px;
 		}
 		#first-section article h1{
@@ -54,10 +55,6 @@ a:hover{
 			order: 0;
 			margin-left: auto;
 			margin-right: auto;
-		}
-		#first-section aside figure{
-			height:400px;
-			width: 300px;
 		}
 		#first-section aside h2{
 			text-align: center;
@@ -79,8 +76,8 @@ a:hover{
 
 /* Slideshow container */
 .slideshow-container {
-	width: 560px;
-	height: 400px;
+	width: 463px;
+	height: 350px;
 	
   position: relative;
   margin-left: auto;
@@ -93,16 +90,16 @@ a:hover{
 		text-align: center;
 }
 .sotwimg{
-	
+	width: 380px;
+	height: 300px;
 }
 
 /* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 35%;
   width: auto;
-  margin-top: -22px;
   padding: 16px;
   color: white;
   font-weight: bold;
@@ -199,6 +196,9 @@ a:hover{
 				margin-left: auto;
 				margin-right: auto;
 			}
+			#first-section article{
+				width: 100%;
+			}
 }
 
 /**************************** Second Breakpoint ************************/
@@ -229,6 +229,10 @@ a:hover{
 			#first-section article{
 				order:0;
 				width:50%;
+				
+			  border-right-style: solid;
+			  border-right-width: 3px;
+			  border-top-style: none;
 				}
 				#first-section aside{
 					order: 1;
