@@ -63,3 +63,13 @@ dots.forEach(function(element, index){
 	
   var player = new Twitch.Player("twitch-vod", options);
   player.setVolume(0.5); 
+
+//Dynamic Style Sheet Manipulation
+style1Change(){
+var sheet = document.createElement('style')
+sheet.innerHTML = "div {background: black;}";
+document.body.appendChild(sheet);
+}
+
+let style1Btn = document.getElementById("style1");
+style1Btn.addEventListener("click", style1Change());
