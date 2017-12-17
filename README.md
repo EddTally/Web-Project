@@ -12,3 +12,6 @@ a twitch channel.
 
 SlideShow for bulldog images
 https://www.w3schools.com/howto/howto_js_slideshow.asp
+
+For looping through a class to assign a slideshow number to each dot I used
+https://stackoverflow.com/questions/39452193/loop-through-array-and-add-event-listener-click-to-each
