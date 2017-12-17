@@ -79,7 +79,7 @@ a:hover{
 	display: flex;
 	flex-direction:row;
 	justify-content: space-between;
-  margin-left: 5%;
+    margin-left: 5%;
 	margin-right: 5%;
 	width: 450px;
 
@@ -88,7 +88,7 @@ a:hover{
 /* Hide the images by default */
 .mySlides {
     display: none;
-		text-align: center;
+	text-align: center;
 
 }
 .sotwimg{
@@ -101,29 +101,29 @@ a:hover{
 }
 
 /* Next & previous buttons */
-.prev, .next {
+.prev1, .next1 {
   cursor: pointer;
   align-self: center;
-	width: 50px;
-	height: 50px;
+  width: 50px;
+  height: 50px;
   padding: 16px;
   color: white;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-	padding: 10px;
+  padding: 10px;
 }
 
-.next {
+.next1 {
 	order:1;
 }
 
-.prev{
+.prev1{
 	order:-1;
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
+.prev1:hover, .next1:hover {
   background-color: rgba(0,0,0,0.8);
 }
 
@@ -135,9 +135,9 @@ a:hover{
   bottom: 8px;
   width: 100%;
   text-align: center;
-	height: 2em;
-	
-	order:2;
+  height: 2em;
+  
+  order:2;
 }
 
 /* Number text (1/3 etc) */
@@ -209,8 +209,8 @@ a:hover{
 			}
 			
 			#first-section aside .dot {
-        height: 15px;
-        width: 15px;
+				height: 15px;
+				width: 15px;
 				}
 				#first-section aside .slideshow-container{
 					width: 100%;
