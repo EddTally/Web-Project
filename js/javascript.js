@@ -46,12 +46,11 @@ document.querySelector(".prev1").addEventListener("click", function(){
 let dots = [].slice.call(document.getElementsByClassName("dot"));
 dots.forEach(function(element, index){
 	element.addEventListener("click", function(){
-		console.log("you clicked dot " + index);
 		currentSlide(index + 1);
 	});
 });
 
-/*	
+	
 //Twitch Vod
 //https://dev.twitch.tv/docs/embed#interactive-frames-for-live-streams-and-vods
 
@@ -64,4 +63,3 @@ dots.forEach(function(element, index){
 	
   var player = new Twitch.Player("twitch-vod", options);
   player.setVolume(0.5); 
-*/
