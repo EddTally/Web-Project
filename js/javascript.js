@@ -50,7 +50,7 @@ dots.forEach(function(element, index){
 	});
 });
 
-	
+/*	
 //Twitch Vod
 //https://dev.twitch.tv/docs/embed#interactive-frames-for-live-streams-and-vods
 
@@ -62,14 +62,20 @@ dots.forEach(function(element, index){
 	  };
 	
   var player = new Twitch.Player("twitch-vod", options);
-  player.setVolume(0.5); 
+  player.setVolume(0.5); */
+
 
 //Dynamic Style Sheet Manipulation
-style1Change(){
-var sheet = document.createElement('style')
-sheet.innerHTML = "div {background: black;}";
-document.body.appendChild(sheet);
-}
+document.getElementById("lightMode").addEventListener("click", function(){
+	var sheet = document.createElement('style');
+	sheet.innerHTML = "body {background: white;}";
+	document.body.appendChild(sheet);
+});
 
-let style1Btn = document.getElementById("style1");
-style1Btn.addEventListener("click", style1Change());
+document.getElementById("darkMode").addEventListener("click", function(){
+	var sheet = document.createElement('style')
+	sheet.innerHTML = "body {background: black;}";
+	document.body.appendChild(sheet);
+});
+
+	
