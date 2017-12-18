@@ -66,15 +66,20 @@ dots.forEach(function(element, index){
 
 
 //Dynamic Style Sheet Manipulation
+
+function swapStyleSheet(sheet){
+	document.getElementById("stylesheet1").setAttribute("href", sheet);
+	sheet.preventDefault();
+}
 document.getElementById("lightMode").addEventListener("click", function(){
-	var sheet = document.createElement('style');
-	sheet.innerHTML = "body {background: white;}";
-	document.body.appendChild(sheet);
+	swapStyleSheet("css/styles.css");
 });
 
 document.getElementById("darkMode").addEventListener("click", function(){
 	var sheet = document.createElement('style')
-	sheet.innerHTML = "body {background: black;}";
+	sheet.innerHTML = "body {background: #184796; color: white;}" +
+	"nav {background: #0f3470;}" +
+	"darkMode {font-weight: bold; color: blue;}";
 	document.body.appendChild(sheet);
 });
 
