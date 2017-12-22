@@ -40,6 +40,7 @@ a:hover{
 footer{
 	background:#4d7fd6;
 	padding: 20px;
+	margin-bottom: 0%;
 }
 /* First section of information, this includes streamer of the week
 			and first article */
@@ -69,12 +70,20 @@ footer{
 		#first-section aside p{
 			text-align: center;
 		}
+		#vodShow, #vodRemove{
+			margin-left: 45%;
+			margin-right: 45%;
+			text-align:center;
+			align-items: center;
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}			
 		#twitch-vod{
 			width:401px;
 			margin-left: auto;
 			margin-right: auto;
 			padding-top: 25px;
-			}
+		}
 
 	/**************************** SlideShow CSS *********************/
 	/* https://www.w3schools.com/howto/howto_js_slideshow.asp */

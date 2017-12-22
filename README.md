@@ -18,3 +18,8 @@ https://www.w3schools.com/howto/howto_js_slideshow.asp
 
 For looping through a class to assign a slideshow number to each dot I used
 https://stackoverflow.com/questions/39452193/loop-through-array-and-add-event-listener-click-to-each
+
+Got general basics of how to use dynamic style sheet manipulation + manipluating other things from
+https://www.w3.org/wiki/Dynamic_style_-_manipulating_CSS_with_JavaScript
+
+Things to do: Put VOD on hide and then have a button to reveal it with javascript

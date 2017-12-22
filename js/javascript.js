@@ -50,10 +50,12 @@ dots.forEach(function(element, index){
 	});
 });
 
-/*	
-//Twitch Vod
-//https://dev.twitch.tv/docs/embed#interactive-frames-for-live-streams-and-vods
 
+//Show hide twitch VOD
+//https://dev.twitch.tv/docs/embed#interactive-frames-for-live-streams-and-vods
+//add this to show button to reduce load time
+document.getElementById("vodShow").addEventListener("click", function(){
+	
   var options = {
 	  width: 401,
 	  height: 301,
@@ -62,25 +64,41 @@ dots.forEach(function(element, index){
 	  };
 	
   var player = new Twitch.Player("twitch-vod", options);
-  player.setVolume(0.5); */
+  player.setVolume(0.5); 
+	
+	document.getElementById("vodShow").innerHTML = "Remove VOD";
+	vodShow.id = "vodRemove";
+});
+	
+
+	//Remove vod
+document.getElementById("vodRemove").addEventListener("click", function(){
+	document.getElementById("twitch-vod").remove();
+	
+	vodRemove.id = "vodShow";
+});
 
 
 //Dynamic Style Sheet Manipulation
-
-function swapStyleSheet(sheet){
-	document.getElementById("stylesheet1").setAttribute("href", sheet);
-	sheet.preventDefault();
-}
 document.getElementById("lightMode").addEventListener("click", function(){
-	swapStyleSheet("css/styles.css");
+	let sheet = document.createElement('style')
+	sheet.innerHTML = "body {background: #79a1e5; color: black;}" +
+	"nav {background: #79a1e5;}" +
+	"#darkMode {border-style: none;}";
+	document.body.appendChild(sheet);
 });
 
 document.getElementById("darkMode").addEventListener("click", function(){
-	var sheet = document.createElement('style')
-	sheet.innerHTML = "body {background: #184796; color: white;}" +
+	let sheet = document.createElement('style')
+	sheet.innerHTML = "body {background: #184796; color: #79a1e5;}" +
 	"nav {background: #0f3470;}" +
-	"darkMode {font-weight: bold; color: blue;}";
+	"#darkMode {border-style: solid; border-width: 3px; border-color: #79a1e5;}";
 	document.body.appendChild(sheet);
 });
+
+
+
+
+
 
 	
