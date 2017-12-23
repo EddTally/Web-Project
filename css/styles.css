@@ -77,6 +77,9 @@ footer{
 			align-items: center;
 			margin-top: 10px;
 			margin-bottom: 10px;
+		}
+    #vodRemove{
+		display:none;
 		}			
 		#twitch-vod{
 			width:401px;

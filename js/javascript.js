@@ -50,34 +50,46 @@ dots.forEach(function(element, index){
 	});
 });
 
-
 //Show hide twitch VOD
 //https://dev.twitch.tv/docs/embed#interactive-frames-for-live-streams-and-vods
 //add this to show button to reduce load time
 document.getElementById("vodShow").addEventListener("click", function(){
 	
-  var options = {
+  let options = {
 	  width: 401,
 	  height: 301,
 	  video: "208391900",
 	  autoplay: false
 	  };
 	
-  var player = new Twitch.Player("twitch-vod", options);
-  player.setVolume(0.5); 
+  let player = new Twitch.Player("twitch-vod", options);
+  player.setVolume(0.5);
+  
+
+	//Changing Buttons
+	document.getElementById("vodShow").style.display = "none";
+	document.getElementById("vodRemove").style.display = "block";
 	
-	document.getElementById("vodShow").innerHTML = "Remove VOD";
-	vodShow.id = "vodRemove";
 });
-	
 
 	//Remove vod
 document.getElementById("vodRemove").addEventListener("click", function(){
-	document.getElementById("twitch-vod").remove();
 	
-	vodRemove.id = "vodShow";
+	//let element = document.getElementById("twitch-vod");
+  //element.parentNode.removeChild(element);
+	
+	var iframes = document.querySelectorAll('iframe');
+  for (var i = 0; i < iframes.length; i++) {
+    iframes[i].parentNode.removeChild(iframes[i]);
+}
+	
+  document.getElementById("vodRemove").style.display = "none";	
+	document.getElementById("vodShow").style.display = "block";
+	
+	
 });
 
+console.log("got to here");
 
 //Dynamic Style Sheet Manipulation
 document.getElementById("lightMode").addEventListener("click", function(){

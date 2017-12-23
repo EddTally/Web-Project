@@ -22,4 +22,11 @@ https://stackoverflow.com/questions/39452193/loop-through-array-and-add-event-li
 Got general basics of how to use dynamic style sheet manipulation + manipluating other things from
 https://www.w3.org/wiki/Dynamic_style_-_manipulating_CSS_with_JavaScript
 
-Things to do: Put VOD on hide and then have a button to reveal it with javascript
+SHOW REMOVE VOD ------------------
+When trying to use a single button to show and remove the twitch VOD, I got a null console error because the
+ID used for the event listener hadn't been defined yet, this might have been because I had the ID being changed 
+for the 1 button when clicked in the showVod event listener. 
+I had to settle for a less eloquent solution and have 2 buttons.
+One initially display:none with a removeVod id and the showVod as a block.
+showVod then dissapears whilst the other button appears. This gets around the console errors that unfortunatley 
+plauged the 'better' solution.
