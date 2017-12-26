@@ -30,3 +30,7 @@ I had to settle for a less eloquent solution and have 2 buttons.
 One initially display:none with a removeVod id and the showVod as a block.
 showVod then dissapears whilst the other button appears. This gets around the console errors that unfortunatley 
 plauged the 'better' solution.
+
+TO DO 
+Make darkMode better
+Get a popup video

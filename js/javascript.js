@@ -75,40 +75,52 @@ document.getElementById("vodShow").addEventListener("click", function(){
 	//Remove vod
 document.getElementById("vodRemove").addEventListener("click", function(){
 	
-	//let element = document.getElementById("twitch-vod");
-  //element.parentNode.removeChild(element);
-	
 	var iframes = document.querySelectorAll('iframe');
   for (var i = 0; i < iframes.length; i++) {
-    iframes[i].parentNode.removeChild(iframes[i]);
-}
+		iframes[i].parentNode.removeChild(iframes[i]);
+		}
 	
   document.getElementById("vodRemove").style.display = "none";	
 	document.getElementById("vodShow").style.display = "block";
-	
-	
 });
 
-console.log("got to here");
+//console.log("got to here");
+
+let x = 0; //lightMode counter
+let y = 0; //darkMode counter
 
 //Dynamic Style Sheet Manipulation
 document.getElementById("lightMode").addEventListener("click", function(){
+	if(x == 0){
 	let sheet = document.createElement('style')
 	sheet.innerHTML = "body {background: #79a1e5; color: black;}" +
-	"nav {background: #79a1e5;}" +
-	"#darkMode {border-style: none;}";
+	"#navDiv {background: #79a1e5;}" +
+	"#darkMode {}";
 	document.body.appendChild(sheet);
+	x =+ 1;
+	y = 0; //resetting darkMode counter
+	}else{
+		console.log("lightMode already on");
+	}
 });
+
+
 
 document.getElementById("darkMode").addEventListener("click", function(){
+	if(y == 0){	
 	let sheet = document.createElement('style')
 	sheet.innerHTML = "body {background: #184796; color: #79a1e5;}" +
-	"nav {background: #0f3470;}" +
-	"#darkMode {border-style: solid; border-width: 3px; border-color: #79a1e5;}";
+	"#navDiv {background: #0f3470;}" +
+	"#darkMode {background: #79a1e5; color: black; } " +
+	"#darkMode:hover {background: white}";
 	document.body.appendChild(sheet);
+	y =+ 1;
+	x = 0; //resetting lightMode counter
+	}
+	else{
+		console.log("darkMode already on");
+	}
 });
-
-
 
 
 
