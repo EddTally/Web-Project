@@ -1,3 +1,46 @@
+//Dynamic Style Sheet Manipulation
+
+let x = 0; //lightMode counter
+let y = 0; //darkMode counter
+
+document.getElementById("lightMode").addEventListener("click", function(){
+	if(x == 0){
+	let sheet = document.createElement('style')
+	sheet.innerHTML = "body {background: #79a1e5; color: black;}" +
+	"#navDiv {background: #79a1e5;}" +
+	"footer {background: #4d7fd6}";
+	document.body.appendChild(sheet);
+	x =+ 1;
+	y = 0; //resetting darkMode counter
+	}else{
+		console.log("lightMode already on");
+	}
+});
+
+document.getElementById("darkMode").addEventListener("click", function(){
+	if(y == 0){	
+	let sheet = document.createElement('style')
+	sheet.innerHTML = "body {background: #184796; color: #79a1e5;}" +
+	"#navDiv {background: #0f3470;}" +
+	"#darkMode {background: #79a1e5; color: black; } " +
+	"#darkMode:hover {background: white}" + 
+	"footer {background: #0f3470}" ;
+	document.body.appendChild(sheet);
+	y =+ 1;
+	x = 0; //resetting lightMode counter
+	}
+	else{
+		console.log("darkMode already on");
+	}
+});
+
+//On Hover refresh Gif
+/*.getElementById("refresh").addEventListener("mouseover", function(){
+	document.getElementById("refresh").innerHTML = "";
+	
+});*/
+
+
 //Bulldog SlideShow
 //https://www.w3schools.com/howto/howto_js_slideshow.asp
 
@@ -86,41 +129,7 @@ document.getElementById("vodRemove").addEventListener("click", function(){
 
 //console.log("got to here");
 
-let x = 0; //lightMode counter
-let y = 0; //darkMode counter
 
-//Dynamic Style Sheet Manipulation
-document.getElementById("lightMode").addEventListener("click", function(){
-	if(x == 0){
-	let sheet = document.createElement('style')
-	sheet.innerHTML = "body {background: #79a1e5; color: black;}" +
-	"#navDiv {background: #79a1e5;}" +
-	"#darkMode {}";
-	document.body.appendChild(sheet);
-	x =+ 1;
-	y = 0; //resetting darkMode counter
-	}else{
-		console.log("lightMode already on");
-	}
-});
-
-
-
-document.getElementById("darkMode").addEventListener("click", function(){
-	if(y == 0){	
-	let sheet = document.createElement('style')
-	sheet.innerHTML = "body {background: #184796; color: #79a1e5;}" +
-	"#navDiv {background: #0f3470;}" +
-	"#darkMode {background: #79a1e5; color: black; } " +
-	"#darkMode:hover {background: white}";
-	document.body.appendChild(sheet);
-	y =+ 1;
-	x = 0; //resetting lightMode counter
-	}
-	else{
-		console.log("darkMode already on");
-	}
-});
 
 
 

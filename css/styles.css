@@ -12,6 +12,26 @@ nav{
 	display: block;
 }
 
+#refresh:hover{
+	border: 7px solid #f3f3f3;
+  border-top: 7px solid #3498db; 
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  animation: spin 2s linear infinite;
+	margin-right: auto; /* To keep nav bar from resizing as :hover re-adjusts width */
+	margin-left: auto;
+	font-size: 0px;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+#reloadGif{
+	width:0px;
+	height:0px;
+	display:none;
+}
 ul{
 	list-style-type: none;
 	display: flex;
@@ -26,6 +46,9 @@ ul{
 	padding:0px;
 	
 }
+.navBar{
+	height: 38px;
+	}	
 a{
 	text-decoration: none;
 	text-align: center;
@@ -204,6 +227,16 @@ footer{
 			flex-direction: row;
 			justify-content: center;
 			}
+			.navBar{
+				width: 150px;
+				height: 44px;
+			}
+      #refresh:hover{
+				width: 40px;
+			  height: 40px;
+				margin-right: 55px; /* To keep nav bar from resizing as :hover re-adjusts width */
+	      margin-left: 55px;
+			}			
 		a{
 			width: 25%;
 			padding-top: 10px;
@@ -244,6 +277,16 @@ footer{
 		font-size: 1.7em;
 		width:700px;
 	}
+	.navBar{
+		width: 175px;
+		height: 72px;
+		}
+		#refresh:hover{
+			width: 65px;
+			height: 65px;
+			margin-right: 55px; /* To keep nav bar from resizing as :hover re-adjusts width */
+			margin-left: 55px;
+			}		
 	a{
 		width: 25%;
 		padding-top: 20px;
