@@ -25,6 +25,10 @@ https://www.w3.org/wiki/Dynamic_style_-_manipulating_CSS_with_JavaScript
 Creating a loader for, onhover refresh button
 https://www.w3schools.com/howto/howto_css_loader.asp
 
+Form Basics
+https://github.com/CTEC3905/03-lab-javascript-1
+https://www.w3schools.com/html/html_forms.asp
+
 Development -----------------
 
 SHOW REMOVE VOD ------------------

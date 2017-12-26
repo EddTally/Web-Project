@@ -10,18 +10,14 @@
 <body>
 
   <div id= "navDiv">
-	<nav>
-	<ul>
-	  <a class="navBar" href="" id="refresh">Refresh
-		<figure>
-		<img id="reloadGif" src="img/reloadGif.gif" alt="reload Gif">
-		</figure>
-		</a>
-		<a class="navBar" id="lightMode">Daytime</a>
-		<a class="navBar" id="darkMode">Night-time</a>
-		<a class="navBar" id="popupVid">$1,000,000</a>
-	</ul>
-	</nav>
+	  <nav>
+	    <ul>
+	      <a class="navBar" href="" id="refresh">Refresh</a>
+		    <a class="navBar" id="lightMode">Daytime</a>
+		    <a class="navBar" id="darkMode">Night-time</a>
+		    <a class="navBar" id="popupVid">$1,000,000</a>
+	    </ul>
+	  </nav>
 	</div>
 	
 	<!-- Insert content here -->
@@ -30,7 +26,37 @@
 	<section id="first-section">
 	
 	  <article>
-	    <h1> Some sort of article here<h1>
+	    <h1> Some sort of article here</h1>
+			<!--------------- Insert Form ------------>
+			
+			<form id="getDetails" action="#" method="post">
+			  
+          <label class="formTitle" for="getFirstName">Enter First name:</label><br>
+          <input class="formInput" type="text" id="getFirstName" placeholder="E.g.: John"><br><br>
+				
+				  <label class="formTitle" for="getLastName">Enter Last name:</label><br>
+				  <input class="formInput" type="text" id="getLastName" placeholder="E.g.: Smith"><br><br>
+				
+				  <label class="formTitle" for="genderCheckbox">Gender</label><br>
+				  <input class="formInput" type="radio" class="genderCheckbox" value="male"> Male<br>
+          <input class="formInput" type="radio" class="genderCheckbox" value="female"> Female<br>
+          <input class="formInput" type="radio" class="genderCheckbox" value="other"> Other<br><br>
+				
+				  <label class="formTitle" for="getAge">Enter Age:</label><br>
+				  <input class="formInput" type="text" id="getAge" placeholder="E.g.: 23"><br><br>
+					
+          <input class="formInput" type="submit"><br>
+        
+			</form>
+			
+			<!-- Insert Relevent text link changes down here, maybe print preview-->
+		<div id="formOutput">
+			<h3 id="firstName">First Name</h3>
+			<h3 id="lastName">Last Name</h3>
+			<h3 id="gender">Gender</h3>
+			<h3 id="age">Age</h3>
+		<div>
+
 
 	  </article>
 	
@@ -94,9 +120,11 @@
 
 	
 	<footer>
-	<button> Click for a surprise </button> <!-- Give me a first please -->
+	  <button> Click for a surprise </button> <!-- Give me a first please -->
 	</footer>
+	
 	<script src="js/javascript.js"></script> <!-- Sript at bottom to decrease website load time -->
 	<script src= "http://player.twitch.tv/js/embed/v1.js"></script>
+	
 </body>
 </html>

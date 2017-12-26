@@ -34,11 +34,41 @@ document.getElementById("darkMode").addEventListener("click", function(){
 	}
 });
 
-//On Hover refresh Gif
-/*.getElementById("refresh").addEventListener("mouseover", function(){
-	document.getElementById("refresh").innerHTML = "";
+//Changing colour form
+let getDetails = document.getElementById("getDetails");
+let getFirstName = document.getElementById("getFirstName");
+let firstName = document.getElementById("firstName");
+
+let getLastName = document.getElementById("getLastName");
+let lastName = document.getElementById("lastName");
+ 
+//let getGender = document.querySelectorAll(".genderCheckbox:checked");
+let gender = document.getElementById("gender");
+
+let getAge = document.getElementById("getAge");
+let age = document.getElementById("age");
+
+
+function PerformGreeting(ev) {	
+
+  let checkedValue = null; 
+  let inputElements = document.getElementsByClassName("genderCheckbox");
+  for(let i=0; inputElements[i]; ++i){
+      if(inputElements[i].checked){
+           checkedValue = inputElements[i].value;
+           break;
+      }
+}
+
+  firstName.innerHTML = getFirstName.value;
+	lastName.innerHTML = getLastName.value;
+	gender.innerHTML = checkedValue;
+	age.innerHTML = getAge.value;
 	
-});*/
+  ev.preventDefault();
+}
+
+getDetails.addEventListener("submit", PerformGreeting);
 
 
 //Bulldog SlideShow

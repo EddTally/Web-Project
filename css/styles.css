@@ -21,16 +21,11 @@ nav{
   animation: spin 2s linear infinite;
 	margin-right: auto; /* To keep nav bar from resizing as :hover re-adjusts width */
 	margin-left: auto;
-	font-size: 0px;
+	font-size: 0px; /* To 'remove' refresh text */
 }
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
-#reloadGif{
-	width:0px;
-	height:0px;
-	display:none;
 }
 ul{
 	list-style-type: none;
@@ -56,6 +51,9 @@ a{
 	padding-bottom: 10px;
 	width:100%;
 }
+a:visited{ /*To Stop refresh link from being dark purple */
+	color:black;
+}
 a:hover{
 	background:lightgrey;
 	cursor: pointer;
@@ -75,12 +73,24 @@ footer{
 		order:1;
 		margin-left: auto;
 		margin-right: auto;
-		
 		border-top-style: solid;
 		border-top-width: 5px;
 		}
 		#first-section article h1{
 			text-align: center;
+		}
+		#first-section article form{
+			border-style: solid;
+			border: 5px;
+			background: #4d7fd6;
+			text-align: left;
+			width: 300px;
+		}
+		#first-section article form .formTitle{
+			margin: 5px 5px 5px 10px;
+		}
+		#first-section article form .formInput{
+      margin: 5px 5px 5px 10px;
 		}
 		#first-section aside{
 			order: 0;
@@ -100,6 +110,12 @@ footer{
 			align-items: center;
 			margin-top: 10px;
 			margin-bottom: 10px;
+			background: #4d7fd6;
+			border: none;
+			padding: 10px;
+		}
+		#vodShow:hover, #vodRemove:hover{
+			background: lightgrey;
 		}
     #vodRemove{
 		display:none;
@@ -256,16 +272,29 @@ footer{
 			#first-section article{
 				width: 100%;
 			}
-			
-			#first-section aside .dot {
-				height: 15px;
-				width: 15px;
-				}
-				#first-section aside .slideshow-container{
-					width: 100%;
-					margin-left:auto;
-					margin-right:auto;
-				}
+			#first-section article form{
+			margin-left: auto;
+			margin-right: auto;
+			width: 600px;
+			}
+			#first-section article form .formTitle{
+			  margin: 5px 5px 5px 10px;
+		  }
+		  #first-section article form .formInput{
+        margin: 5px 5px 5px 10px;
+		  }
+			#first-section article h3{
+				padding: 5px 5px 5px 5px;
+			}
+		  #first-section aside .dot {
+			  height: 15px;
+			  width: 15px;
+			}
+			#first-section aside .slideshow-container{
+				width: 100%;
+				margin-left:auto;
+				margin-right:auto;
+			}
 }
 
 /**************************** Second Breakpoint ************************/
@@ -310,6 +339,11 @@ footer{
 			  border-right-style: solid;
 			  border-right-width: 3px;
 			  border-top-style: none;
+				}
+				#first-section article h3{
+					margin-left: auto;
+				  margin-right: auto;
+		    	width: 600px;
 				}
 				#first-section aside{
 					order: 1;
