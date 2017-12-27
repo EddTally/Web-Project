@@ -8,6 +8,7 @@ document.getElementById("lightMode").addEventListener("click", function(){
 	let sheet = document.createElement('style')
 	sheet.innerHTML = "body {background: #79a1e5; color: black;}" +
 	"#navDiv {background: #79a1e5;}" +
+	"#getDetails {color: #79a1e5;}" +
 	"footer {background: #4d7fd6}";
 	document.body.appendChild(sheet);
 	x =+ 1;
@@ -24,6 +25,7 @@ document.getElementById("darkMode").addEventListener("click", function(){
 	"#navDiv {background: #0f3470;}" +
 	"#darkMode {background: #79a1e5; color: black; } " +
 	"#darkMode:hover {background: white}" + 
+	"#getDetails {color: black;}" +
 	"footer {background: #0f3470}" ;
 	document.body.appendChild(sheet);
 	y =+ 1;
@@ -34,7 +36,7 @@ document.getElementById("darkMode").addEventListener("click", function(){
 	}
 });
 
-//Form -----------------------------
+//Form ---------------------------------------------------
 let getDetails = document.getElementById("getDetails");
 let getFirstName = document.getElementById("getFirstName");
 let firstName = document.getElementById("firstName");
@@ -48,7 +50,7 @@ let getAge = document.getElementById("getAge");
 let age = document.getElementById("age");
 
 function submitForm(ev) {	
-
+//https://www.w3schools.com/jsref/prop_checkbox_checked.asp
   var getGender = document.forms[0];
   var txt = "";
   var i;
@@ -69,14 +71,17 @@ function submitForm(ev) {
 getDetails.addEventListener("submit", submitForm);
 
 //Resetting form
-document.getElementById("resetBtn").addEventListener("click", function(){
-	document.getElementById("getDetails").reset();
+function resetForm(){
+  document.getElementById("getDetails").reset();
 	
 	firstName.innerHTML = "First Name";
 	lastName.innerHTML = "Last Name";
 	gender.innerHTML = "Gender";
 	age.innerHTML = "Age";
-});
+}
+
+getDetails.addEventListener("reset", resetForm);
+
 
 //Bulldog SlideShow
 //https://www.w3schools.com/howto/howto_js_slideshow.asp
