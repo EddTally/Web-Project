@@ -34,42 +34,49 @@ document.getElementById("darkMode").addEventListener("click", function(){
 	}
 });
 
-//Changing colour form
+//Form -----------------------------
 let getDetails = document.getElementById("getDetails");
 let getFirstName = document.getElementById("getFirstName");
 let firstName = document.getElementById("firstName");
 
 let getLastName = document.getElementById("getLastName");
 let lastName = document.getElementById("lastName");
- 
-//let getGender = document.querySelectorAll(".genderCheckbox:checked");
+
 let gender = document.getElementById("gender");
 
 let getAge = document.getElementById("getAge");
 let age = document.getElementById("age");
 
+function submitForm(ev) {	
 
-function PerformGreeting(ev) {	
-
-  let checkedValue = null; 
-  let inputElements = document.getElementsByClassName("genderCheckbox");
-  for(let i=0; inputElements[i]; ++i){
-      if(inputElements[i].checked){
-           checkedValue = inputElements[i].value;
-           break;
+  var getGender = document.forms[0];
+  var txt = "";
+  var i;
+  for (i = 0; i < getGender.length; i++) {
+      if (getGender[i].checked) {
+        txt = txt + getGender[i].value + " ";
       }
-}
+  }
 
   firstName.innerHTML = getFirstName.value;
 	lastName.innerHTML = getLastName.value;
-	gender.innerHTML = checkedValue;
+	gender.innerHTML = txt;
 	age.innerHTML = getAge.value;
 	
   ev.preventDefault();
 }
 
-getDetails.addEventListener("submit", PerformGreeting);
+getDetails.addEventListener("submit", submitForm);
 
+//Resetting form
+document.getElementById("resetBtn").addEventListener("click", function(){
+	document.getElementById("getDetails").reset();
+	
+	firstName.innerHTML = "First Name";
+	lastName.innerHTML = "Last Name";
+	gender.innerHTML = "Gender";
+	age.innerHTML = "Age";
+});
 
 //Bulldog SlideShow
 //https://www.w3schools.com/howto/howto_js_slideshow.asp

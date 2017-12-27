@@ -28,6 +28,7 @@ https://www.w3schools.com/howto/howto_css_loader.asp
 Form Basics
 https://github.com/CTEC3905/03-lab-javascript-1
 https://www.w3schools.com/html/html_forms.asp
+https://www.w3schools.com/jsref/prop_checkbox_checked.asp
 
 Development -----------------
 
