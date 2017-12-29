@@ -171,9 +171,50 @@ document.getElementById("vodRemove").addEventListener("click", function(){
 
 //console.log("got to here");
 
+// Youtube Embed -----------------------------------
+//https://developers.google.com/youtube/iframe_api_reference
 
+// 2. This code loads the IFrame Player API code asynchronously.
+var tag = document.createElement('script');
 
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-
-
+// 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+function createYoutubeEmbed(){			
+  let player = new YT.Player("player", {
+    height: '390',
+    width: '640',
+    videoId: 'eBoV0wNShs0',
+  	playerVars: {
+	    autoplay: 1,
+	    enablejsapi: 1,
+	  	fullscreen: 0,
+	  }
+  });
 	
+	let sheet = document.createElement('style')
+	sheet.innerHTML = "body {pointer-events: none}" + 
+	"#player {pointer-events:visible}" +
+	"#ytEmbedClose {pointer-events:visible}";
+	document.body.appendChild(sheet);
+}
+document.getElementById("youtubeEmbed").addEventListener("click", createYoutubeEmbed);
+
+//Close Button
+document.getElementById("ytEmbedClose").addEventListener("click", function(){
+	
+	//In a perfect world this bit would be replaced by a player.stop function, instead it 
+	//just removed the iframe created in createYoutubeEmbed
+	var iframes = document.querySelectorAll('iframe');
+  for (var i = 0; i < iframes.length; i++) {
+		iframes[i].parentNode.removeChild(iframes[i]);
+	}
+	
+	let sheet = document.createElement('style')
+	sheet.innerHTML = "body {pointer-events: visible}";
+	document.body.appendChild(sheet);
+
+});

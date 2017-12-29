@@ -63,6 +63,15 @@ footer{
 	padding: 20px;
 	margin-bottom: 0%;
 }
+#player{
+	position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+	width: 500px;
+	height: 304px;
+}
 /* First section of information, this includes streamer of the week
 			and first article */
 #first-section{
@@ -229,8 +238,6 @@ footer{
 	/*************************** First Breakpoint ********************/		
 			
 @media only screen and (min-width: 550px) {
-    body {
-    }
 	nav{
 		display:flex;
 		margin-left: auto;
@@ -296,13 +303,15 @@ footer{
 				margin-left:auto;
 				margin-right:auto;
 			}
+			
+	#player{
+		width: 800px;
+	  height: 487px;
 }
 
 /**************************** Second Breakpoint ************************/
 
 @media only screen and (min-width: 1300px) {
-    body {
-    }
 	nav{
 		font-size: 1.7em;
 		width:700px;
