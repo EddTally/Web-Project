@@ -8,7 +8,7 @@ document.getElementById("lightMode").addEventListener("click", function(){
 	let sheet = document.createElement('style')
 	sheet.innerHTML = "body {background: #79a1e5; color: black;}" +
 	"#navDiv {background: #79a1e5;}" +
-	"#getDetails {color: #79a1e5;}" +
+	"#getDetails {color: black;}" +
 	"footer {background: #4d7fd6}";
 	document.body.appendChild(sheet);
 	x += 1;
@@ -191,7 +191,7 @@ document.getElementById("vodShow").addEventListener("click", function(){
 	//Remove vod
 document.getElementById("vodRemove").addEventListener("click", function(){
 	
-	var iframes = document.querySelectorAll('iframe');
+	let iframes = document.querySelectorAll('iframe');
   for (var i = 0; i < iframes.length; i++) {
 		iframes[i].parentNode.removeChild(iframes[i]);
 		}
@@ -213,7 +213,7 @@ var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
+//after the API code downloads.
 let x1 = 0; //Counter so that multiple iframes cannot be used loaded at once
 
 document.getElementById("youtubeEmbed").addEventListener("click", function(){		
@@ -254,7 +254,7 @@ document.getElementById("ytEmbedClose").addEventListener("click", function(){
 	
 	//In a perfect world this bit would be replaced by a player.stop function, instead it 
 	//just removes all iframe's created. Which only includes the VOD iframe and vice versa
-	var iframes = document.querySelectorAll('iframe');
+	let iframes = document.querySelectorAll('iframe');
   for (var i = 0; i < iframes.length; i++) {
 		iframes[i].parentNode.removeChild(iframes[i]);
 	}
