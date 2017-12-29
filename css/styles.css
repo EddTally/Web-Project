@@ -6,10 +6,40 @@ flex-direction: column;
 margin: 0px;
 }
 
-nav{
+ul{
 	width:100%;
 	font-size: 1em;
 	display: block;
+}
+li{
+	list-style-type: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width:100%;
+	order:-1;
+
+	border-style: solid;
+	border-width: 1px;
+	border-color: black;
+	padding:0px;
+}
+.navBar{
+	height: 38px;
+	}	
+a{
+	text-decoration: none;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width:100%;
+}
+a:visited{ /*To Stop refresh link from being dark purple */
+	color:black;
+}
+a:hover{
+	background:lightgrey;
+	cursor: pointer;
 }
 /* Falling money CSS animation */
 /* https://premiumcoding.com/css3-tricks-falling-Leaves-css/ *//
@@ -41,6 +71,9 @@ nav{
 	animation-direction: linear;
 	animation-iteration-count: 3;
 }
+/*Randomize the money so they don’t all start falling at the same time. 
+I used the nth-child method to define several sequences of leaves with different animation delays.
+Description copied and adapted from above URL */ 
 .fallingMoney span:nth-child(5n+5) {
   animation-delay: 1.3s;
   animation-delay: 1.3s;
@@ -74,15 +107,15 @@ nav{
 @keyframes fallingMoney {
   0% {
   opacity: 0;
-	transform: translate(0, 0px) rotateZ(0deg);
+	transform: translate(0px, 0px) rotateZ(0deg);
   }
 	25% {
   opacity: 1;
-	transform: translate(50, 300px) rotateZ(90deg);
+	transform: translate(50px, 300px) rotateZ(90deg);
   }
   75% {
   opacity: 1;
-	transform: translate(100px, 600px) rotateZ(270deg) skewX(20deg, 10deg); 
+	transform: translate(100px, 600px) rotateZ(270deg); 
   }
   100% {
   opacity: 0;
@@ -105,37 +138,6 @@ nav{
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
-}
-ul{
-	list-style-type: none;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width:100%;
-	order:-1;
-
-	border-style: solid;
-	border-width: 1px;
-	border-color: black;
-	padding:0px;
-	
-}
-.navBar{
-	height: 38px;
-	}	
-a{
-	text-decoration: none;
-	text-align: center;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	width:100%;
-}
-a:visited{ /*To Stop refresh link from being dark purple */
-	color:black;
-}
-a:hover{
-	background:lightgrey;
-	cursor: pointer;
 }
 footer{
 	background:#4d7fd6;
@@ -314,7 +316,7 @@ footer{
 	/*************************** First Breakpoint ********************/		
 			
 @media only screen and (min-width: 550px) {
-	nav{
+	ul{
 		display:flex;
 		margin-left: auto;
 		margin-right: auto;
@@ -323,7 +325,7 @@ footer{
 		width: 600px;
 		font-size: 1.3em;
 		}
-		ul{
+		li{
 			flex-direction: row;
 			justify-content: center;
 			}
@@ -392,7 +394,7 @@ footer{
 /**************************** Second Breakpoint ************************/
 
 @media only screen and (min-width: 1300px) {
-	nav{
+	ul{
 		font-size: 1.7em;
 		width:700px;
 	}
