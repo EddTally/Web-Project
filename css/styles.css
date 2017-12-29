@@ -11,6 +11,24 @@ nav{
 	font-size: 1em;
 	display: block;
 }
+/* Falling money CSS animation */
+/* https://premiumcoding.com/css3-tricks-falling-leaves-css/ */
+#moneyAnimation:hover{
+	width: 50px;
+  height: 50px;
+  background-color: red;
+  position: relative;
+  animation-name: moneyRain;
+  animation-duration: 10s;
+}
+@keyframes moneyRain {
+  0%  {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
 
 #refresh:hover{
 	border: 7px solid #f3f3f3;
@@ -73,6 +91,7 @@ footer{
 	height: 304px;
 	display: none;
 }
+
 /* First section of information, this includes streamer of the week
 			and first article */
 #first-section{

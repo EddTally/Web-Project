@@ -188,7 +188,6 @@ let x1 = 0; //Counter so that multiple iframes cannot be used loaded at once
 document.getElementById("youtubeEmbed").addEventListener("click", function(){		
 
 /*Still only loads once on webpage, the counter does not affect this*/
-
 if(x1 == 0){	
   let player = new YT.Player("player", {
     height: '390',
