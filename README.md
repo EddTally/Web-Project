@@ -1,8 +1,6 @@
 # web-project
 Assessment Website
 
-
-
 Twitch API VOD Doc
 https://dev.twitch.tv/docs/embed#interactive-frames-for-live-streams-and-vods
 'Invalid operation: t.channel is not implemented' is unavoidable, this is because
@@ -32,6 +30,7 @@ https://www.w3schools.com/jsref/prop_checkbox_checked.asp
 
 Embedding youtube videos
 https://developers.google.com/youtube/iframe_api_reference
+Popup iframe utube video wont open more than once, function still being called as styles are still being appended.
 
 Falling money reference/inspiration
 https://premiumcoding.com/css3-tricks-falling-leaves-css/
@@ -50,7 +49,3 @@ plauged the 'better' solution.
 Counter added to the appending stylesheet JS functions 'lightMode' and 'darkMode' 
 to reduce webpage size if mutiple of the same style tries to be appended during runtime.
 Counter resets when other style is selected.
-
-TO DO 
-Make darkMode better
-Popup iframe utube video wont open more than once, function still being called as styles are still being appended.

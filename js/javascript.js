@@ -36,6 +36,37 @@ document.getElementById("darkMode").addEventListener("click", function(){
 	}
 });
 
+
+// Money rain ----------------------------------------
+//function for timeout so falling money animatin disappears from page
+function FallingMoneyDisplayNone(){ 
+  let sheet = document.createElement('style');
+  sheet.innerHTML = ".fallingMoney {display:none;}" + 
+	"body {pointer-events:visible}";
+	document.body.appendChild(sheet);
+	console.log("Animation Ended");
+}
+let y1 = 0; //Counter for stopping and starting animation
+
+//Appending the animation to the moneyAmimation button on the nav bar
+document.getElementById("moneyAnimation").addEventListener("click", function(){
+	let sheet = document.createElement('style');
+	
+	setTimeout(FallingMoneyDisplayNone, 15000); //After 6s the money span's are hidden again
+	
+	if(y1 == 0){	
+	  sheet.innerHTML = ".fallingMoney {display: inline-block;}" +
+		"body {pointer-events:none}" + 
+		"#navDiv {pointer-events:visible}";
+	  document.body.appendChild(sheet);
+	  y1 += 1;
+	}else{ //When the button is clicked again
+		FallingMoneyDisplayNone();
+		y1 = 0;
+	}
+		
+});
+
 //Form ---------------------------------------------------
 let getDetails = document.getElementById("getDetails");
 let getFirstName = document.getElementById("getFirstName");
