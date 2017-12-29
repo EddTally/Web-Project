@@ -71,6 +71,7 @@ footer{
   transform: translate(-50%, -50%);
 	width: 500px;
 	height: 304px;
+	display: none;
 }
 /* First section of information, this includes streamer of the week
 			and first article */

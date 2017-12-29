@@ -185,9 +185,12 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
       //    after the API code downloads.
 let x1 = 0; //Counter so that multiple iframes cannot be used loaded at once
 
-function createYoutubeEmbed(){			
-  if(x1 == 0){	
-	let player = new YT.Player("player", {
+document.getElementById("youtubeEmbed").addEventListener("click", function(){		
+
+/*Still only loads once on webpage, the counter does not affect this*/
+
+if(x1 == 0){	
+  let player = new YT.Player("player", {
     height: '390',
     width: '640',
     videoId: 'eBoV0wNShs0',
@@ -202,22 +205,19 @@ function createYoutubeEmbed(){
   });
 	
 	let sheet = document.createElement('style')
-	sheet.innerHTML = "body {pointer-events: none}" + 
-	"#player {pointer-events:visible}" +
+	sheet.innerHTML = "body {pointer-events: none;}" +	
+	"#player {pointer-events:visible; display:block;}" +
 	"#ytEmbedClose {pointer-events:visible}";
 	document.body.appendChild(sheet);
 	x1 += 1;
 	}else{
 		console.log("Youtube Video already appended");
-	}
-}
-document.getElementById("youtubeEmbed").addEventListener("click", createYoutubeEmbed);
+	}	
+});
 
 function onPlayerReady(event) {
   event.target.playVideo();
 }
-var done = false;
-
 
 //Close Button
 document.getElementById("ytEmbedClose").addEventListener("click", function(){
