@@ -11,7 +11,7 @@ document.getElementById("lightMode").addEventListener("click", function(){
 	"#getDetails {color: #79a1e5;}" +
 	"footer {background: #4d7fd6}";
 	document.body.appendChild(sheet);
-	x =+ 1;
+	x += 1;
 	y = 0; //resetting darkMode counter
 	}else{
 		console.log("lightMode already on");
@@ -28,7 +28,7 @@ document.getElementById("darkMode").addEventListener("click", function(){
 	"#getDetails {color: black;}" +
 	"footer {background: #0f3470}" ;
 	document.body.appendChild(sheet);
-	y =+ 1;
+	y += 1;
 	x = 0; //resetting lightMode counter
 	}
 	else{
@@ -183,16 +183,22 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 // 3. This function creates an <iframe> (and YouTube player)
       //    after the API code downloads.
+let x1 = 0; //Counter so that multiple iframes cannot be used loaded at once
+
 function createYoutubeEmbed(){			
-  let player = new YT.Player("player", {
+  if(x1 == 0){	
+	let player = new YT.Player("player", {
     height: '390',
     width: '640',
     videoId: 'eBoV0wNShs0',
   	playerVars: {
-	    autoplay: 1,
-	    enablejsapi: 1,
-	  	fullscreen: 0,
-	  }
+	    autoplay: '1',
+	    enablejsapi: '1',
+	  	allowfullscreen: '0',
+	  },
+		events: {
+        'onReady': onPlayerReady
+      }
   });
 	
 	let sheet = document.createElement('style')
@@ -200,14 +206,24 @@ function createYoutubeEmbed(){
 	"#player {pointer-events:visible}" +
 	"#ytEmbedClose {pointer-events:visible}";
 	document.body.appendChild(sheet);
+	x1 += 1;
+	}else{
+		console.log("Youtube Video already appended");
+	}
 }
 document.getElementById("youtubeEmbed").addEventListener("click", createYoutubeEmbed);
+
+function onPlayerReady(event) {
+  event.target.playVideo();
+}
+var done = false;
+
 
 //Close Button
 document.getElementById("ytEmbedClose").addEventListener("click", function(){
 	
 	//In a perfect world this bit would be replaced by a player.stop function, instead it 
-	//just removed the iframe created in createYoutubeEmbed
+	//just removes all iframe's created. Which only includes the VOD iframe and vice versa
 	var iframes = document.querySelectorAll('iframe');
   for (var i = 0; i < iframes.length; i++) {
 		iframes[i].parentNode.removeChild(iframes[i]);
@@ -216,5 +232,7 @@ document.getElementById("ytEmbedClose").addEventListener("click", function(){
 	let sheet = document.createElement('style')
 	sheet.innerHTML = "body {pointer-events: visible}";
 	document.body.appendChild(sheet);
+	
+	x1 = 0;
 
 });

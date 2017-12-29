@@ -50,4 +50,4 @@ Counter resets when other style is selected.
 
 TO DO 
 Make darkMode better
-Get a popup video
+Popup iframe utube video wont open more than once, function still being called as styles are still being appended.
