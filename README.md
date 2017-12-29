@@ -22,7 +22,7 @@ https://www.w3schools.com/html/html_forms.asp
 https://www.w3schools.com/jsref/prop_checkbox_checked.asp
 
 Twitch API VOD Doc
-*Important* VOD Doesn't Work when website is loaded from GitHub, therefore VOD show and Close Function will not work
+*strong* VOD Doesn't Work when website is loaded from GitHub, therefore VOD show and Close Function will not work
 https://dev.twitch.tv/docs/embed#interactive-frames-for-live-streams-and-vods
 'Invalid operation: t.channel is not implemented' is unavoidable, this is because
 I want to play a VOD therefore I have not specified a twitch channel.
@@ -49,7 +49,7 @@ https://stackoverflow.com/questions/39452193/loop-through-array-and-add-event-li
 
 Embedding youtube videos
 https://developers.google.com/youtube/iframe_api_reference
-*Important* 
+*Strong* 
 Popup iframe utube video wont open more than once, function still being called as styles are still being appended!
 
 

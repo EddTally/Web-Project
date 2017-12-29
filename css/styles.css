@@ -404,9 +404,9 @@ footer{
 		}
 		#refresh:hover{
 			width: 65px;
-			height: 65px;
-			margin-right: 55px; /* To keep nav bar from resizing as :hover re-adjusts width */
-			margin-left: 55px;
+			height: 60px;
+			margin-right: 51.5px; /* To keep nav bar from resizing as :hover re-adjusts width */
+			margin-left: 51.5px;
 			}		
 	a{
 		width: 25%;

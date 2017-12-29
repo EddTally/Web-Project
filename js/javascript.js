@@ -52,7 +52,7 @@ let y1 = 0; //Counter for stopping and starting animation
 document.getElementById("moneyAnimation").addEventListener("click", function(){
 	let sheet = document.createElement('style');
 	
-	setTimeout(FallingMoneyDisplayNone, 15000); //After 6s the money span's are hidden again
+	let timeout = setTimeout(FallingMoneyDisplayNone, 15000); //After 6s the money span's are hidden again
 	
 	if(y1 == 0){	
 	  sheet.innerHTML = ".fallingMoney {display: inline-block;}" +
@@ -85,12 +85,14 @@ function submitForm(ev) {
   var getGender = document.forms[0];
   var txt = "";
   var i;
+	//Looping through the Gender Checkboxs to find the one that is checked
   for (i = 0; i < getGender.length; i++) {
       if (getGender[i].checked) {
         txt = txt + getGender[i].value + " ";
       }
   }
 
+	//Setting the values of the text below the form
   firstName.innerHTML = getFirstName.value;
 	lastName.innerHTML = getLastName.value;
 	gender.innerHTML = txt;
@@ -233,7 +235,7 @@ if(x1 == 0){
         'onReady': onPlayerReady
       }
   });
-	
+	//New dynamic ss to make sure elements cannot be clicked whilst watching video
 	let sheet = document.createElement('style')
 	sheet.innerHTML = "body {pointer-events: none;}" +	
 	"#player {pointer-events:visible; display:block;}" +
@@ -258,7 +260,7 @@ document.getElementById("ytEmbedClose").addEventListener("click", function(){
   for (var i = 0; i < iframes.length; i++) {
 		iframes[i].parentNode.removeChild(iframes[i]);
 	}
-	
+	// Pointer events makes sure all elements are now clickable when you press the close video button
 	let sheet = document.createElement('style')
 	sheet.innerHTML = "body {pointer-events: visible}";
 	document.body.appendChild(sheet);
