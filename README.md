@@ -1,6 +1,8 @@
 # web-project
 Assessment Website
 
+This website was created for my BSc Website Development module and was finished whilst on holiday, I wanted to have some fun with it. 
+
 Development Problems and References -----------------
 
 Creating a loader for, onhover refresh button
